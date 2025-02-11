@@ -1,57 +1,78 @@
+window.addEventListener("load", () => {
+  const caseStudies = document.querySelectorAll(".case-study");
+  let maxHeight = 0;
+
+  // Find the tallest case-study
+  caseStudies.forEach((caseStudy) => {
+    maxHeight = Math.max(maxHeight, caseStudy.offsetHeight);
+  });
+
+  // Apply the tallest height to all case-study elements
+  caseStudies.forEach((caseStudy) => {
+    caseStudy.style.height = `${maxHeight}px`;
+  });
+
+  // Now, get the updated case study height
+  initializeGSAP(maxHeight);
+});
+
 gsap.registerPlugin(ScrollTrigger);
 
-const cards = document.querySelectorAll(".case-study");
-const header = document.querySelector(".pinn");
-const paginationDots = document.querySelectorAll(".pagination div");
-const animation = gsap.timeline();
+function initializeGSAP(caseStudyHeight) {
+  const cards = document.querySelectorAll(".case-study");
 
-const caseStudyHeight = cards[0]?.offsetHeight || 0;
-cards.forEach((card, index) => {
-  if (index > 0) {
-    //increment y value of each card by 200px
-    // gsap.set(card, {y:index * 800})
-    //animate each card back to 0 (for stacking)
+  const header = document.querySelector(".pinn");
+  const paginationDots = document.querySelectorAll(".pagination div");
+  const animation = gsap.timeline();
 
-    gsap.set(card, { y: index * caseStudyHeight });
+  // const caseStudyHeight = cards[0]?.offsetHeight || 0;
+  cards.forEach((card, index) => {
+    if (index > 0) {
+      //increment y value of each card by 200px
+      // gsap.set(card, {y:index * 800})
+      //animate each card back to 0 (for stacking)
 
-    animation.to(card, { y: 0, duration: index * 0.5, ease: "none" }, 0);
-    // animation.to(card, {y: 0, duration: index * 0.5, ease: "none" }, 0);
-    // animation.to(
-    //     card,
-    //     { y: 0, duration: 0.5, ease: "power1.inOut" },
-    //     index * 0.2 // Stagger the animations
-    // );
-  }
-});
+      gsap.set(card, { y: index * caseStudyHeight });
 
-ScrollTrigger.create({
-  trigger: ".wrapper",
-  start: "top top",
-  pin: true,
-  //   end:`+=${(cards.length * 200) + header.offsetHeight}`,
-  // end: `+=${cards.length * caseStudyHeight + header.offsetHeight}`,
-  end: `+=${cards.length * caseStudyHeight}`,
-  scrub: true,
-  animation: animation,
-  markers: false,
-  onUpdate: (self) => {
-    // Calculate the active index based on the progress
-    const activeIndex = Math.floor(self.progress * (cards.length - 1));
+      animation.to(card, { y: 0, duration: index * 0.5, ease: "none" }, 0);
+      // animation.to(card, {y: 0, duration: index * 0.5, ease: "none" }, 0);
+      // animation.to(
+      //     card,
+      //     { y: 0, duration: 0.5, ease: "power1.inOut" },
+      //     index * 0.2 // Stagger the animations
+      // );
+    }
+  });
 
-    // Update pagination dots
-    paginationDots.forEach((dot, index) => {
-      if (index === activeIndex) {
-        dot.classList.add("bg-yellow"); // Active color
-        dot.classList.remove("bg-fadeBlack"); // Remove inactive color
-        dot.style.transform = "scale(1.5)"; // Make the active dot bigger
-      } else {
-        dot.classList.remove("bg-yellow"); // Remove active color
-        dot.classList.add("bg-fadeBlack"); // Inactive color
-        dot.style.transform = "scale(1)"; // Reset size for inactive dots
-      }
-    });
-  },
-});
+  ScrollTrigger.create({
+    trigger: ".wrapper",
+    start: "top top",
+    pin: true,
+    //   end:`+=${(cards.length * 200) + header.offsetHeight}`,
+    end: `+=${cards.length * caseStudyHeight + header.offsetHeight}`,
+    // end: `+=${cards.length * caseStudyHeight}`,
+    scrub: true,
+    animation: animation,
+    markers: false,
+    onUpdate: (self) => {
+      // Calculate the active index based on the progress
+      const activeIndex = Math.floor(self.progress * (cards.length - 1));
+
+      // Update pagination dots
+      paginationDots.forEach((dot, index) => {
+        if (index === activeIndex) {
+          dot.classList.add("bg-yellow"); // Active color
+          dot.classList.remove("bg-fadeBlack"); // Remove inactive color
+          dot.style.transform = "scale(1.5)"; // Make the active dot bigger
+        } else {
+          dot.classList.remove("bg-yellow"); // Remove active color
+          dot.classList.add("bg-fadeBlack"); // Inactive color
+          dot.style.transform = "scale(1)"; // Reset size for inactive dots
+        }
+      });
+    },
+  });
+}
 
 // ScrollTrigger configuration
 // ScrollTrigger.create({

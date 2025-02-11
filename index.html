@@ -24,6 +24,7 @@
               yellow: "#F3A53B",
               darkGray: "#383838",
               offwhite: "#F5F5F5",
+              A3grey: "#A3A3A3",
             },
             fontFamily: {
               bricolage: ['"Bricolage Grotesque"', "sans-serif"],
@@ -44,10 +45,10 @@
       <nav class="flex justify-between md:w-[85%] w-[90%] pt-8 pb-8">
         <img src="./Assets/images/Frame (2).svg" class="w-[80px]" alt="" />
         <div class="flex items-center">
-          <a href="" class="text-offwhite hidden md:flex">My Resume</a>
+          <a href="" class="text-A3grey hidden md:flex">My Resume</a>
           <a
             href=""
-            class="text-offwhite border border-white px-8 py-4 ml-6 rounded-full hidden md:flex"
+            class="text-A3grey border border-white px-8 py-4 ml-6 rounded-full hidden md:flex"
             >Let's Talk</a
           >
         </div>
@@ -62,16 +63,17 @@
               class="w-[8%] min-w-[70px]"
             />
           </div>
-          <p class="font-bricolage text-white mb-4 text-base">
-            Hello There, I'm <span class="font-semibold">Abasifreke</span> and I
+          <p class="font-bricolage text-A3grey mb-4 text-base">
+            Hello There, I'm
+            <span class="font-semibold text-customGray">Abasifreke</span> and I
             am a...
           </p>
           <!-- <h1 class="text-white text-9xl">UX Designer</h1> -->
-          <img class="my-8" src="./Assets/images/header-logo.svg" alt="" />
+          <img class="my-8" src="./Assets/images/heroImage.svg" alt="" />
           <div class="md:flex md:justify-between md:flex-row flex-col">
             <div class="h-px bg-darkGray md:w-[35%] w-full md:mb-px mb-5"></div>
             <div class="md:w-[60%] font-white">
-              <p class="text-white font-bricolage text-base">
+              <p class="text-A3grey font-bricolage text-base">
                 As a strategic design professional, I specialize in designing
                 creative and delightful user experiences through innovative
                 design thinking and value-driven methodology. My approach
@@ -88,7 +90,7 @@
     <!-- case study section -->
     <!-- page should pin here -->
     <section
-      class="flex items-center flex-col h-[100vh] relative wrapper justify-center mb-[50px] md:mb-[60px]"
+      class="flex items-center flex-col h-[100vh] relative wrapper justify-center mb-[50px] md:mb-[100px]"
     >
       <!-- <div
         class="w-[85%] flex flex-col h-[100vh] border-blue border relative case-study-container"
@@ -116,30 +118,36 @@
         <!-- only the containers inside here should scroll and the scrolling should happen in a way the second should scroll on top of the first, third on top of the second till the scrolling of this section complete and then unpin -->
         <div class="w-full md:w-[90%] relative flex flex-col">
           <div
-            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-[100%] rounded-lg case-study flex-1"
+            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-[100%] rounded-lg case-study absolute flex flex-col justify-between md:flex-none"
           >
             <div class="mb-4 flex">
               <div class="">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   Wellness
                 </p>
               </div>
               <div class="border-x border-darkGray mx-2 px-2">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   Health
                 </p>
               </div>
               <div class="">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   UX Strategy
                 </p>
               </div>
             </div>
 
-            <h4 class="text-white mb-4 font-recoleta text-2xl">
+            <h4 class="text-customGray mb-4 font-recoleta text-2xl">
               Mental Power - A Wellness and Self Improvement Application
             </h4>
-            <p class="text-customGray mb-2 font-bricolage text-base">
+            <p class="text-A3grey mb-2 font-bricolage text-base">
               The mental power application is a self improvement application
               that combines the capabilities of three synergistic apps,
               empowering users with globally recognised techniques to create,
@@ -150,34 +158,41 @@
               src="./Assets/images/Frame 1000002316.svg"
               class="h-auto"
               alt=""
+              loading="lazy"
             />
           </div>
 
           <div
-            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-[100%] rounded-lg case-study flex-1"
+            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-[100%] rounded-lg case-study absolute flex flex-col flex-grow justify-between md:flex-none"
           >
             <div class="mb-4 flex">
               <div class="">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   Social
                 </p>
               </div>
               <div class="border-x border-darkGray mx-2 px-2">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   Blockchain
                 </p>
               </div>
               <div class="">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   Web3
                 </p>
               </div>
             </div>
 
-            <h4 class="text-white mb-4 font-recoleta text-2xl">
+            <h4 class="text-customGray mb-4 font-recoleta text-2xl">
               Funge Web App - A Social NFT Trading Platform
             </h4>
-            <p class="text-customGray mb-4 font-bricolage text-base">
+            <p class="text-A3grey mb-4 font-bricolage text-base">
               Funge Platform is a social NFT marketplace to buy, sell and create
               NFTs seamlessly and It is powered by the polygon blockchain for
               ultra-low gas fees.
@@ -186,35 +201,42 @@
             <img
               src="./Assets/images/Frame 1000002316 (2).svg"
               alt=""
-              class="h-auto"
+              class=""
+              loading="lazy"
             />
           </div>
           <div
-            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-[100%] rounded-lg case-study flex-1"
+            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-[100%] rounded-lg case-study absolute flex flex-col flex-grow justify-between md:flex-none"
           >
             <div class="mb-4 flex">
               <div class="">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   SaaS
                 </p>
               </div>
               <div class="border-x border-darkGray mx-2 px-2">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   B2B
                 </p>
               </div>
               <div class="">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   Fintech
                 </p>
               </div>
             </div>
 
-            <h4 class="text-white mb-4 font-recoleta text-2xl">
+            <h4 class="text-customGray mb-4 font-recoleta text-2xl">
               Sudo Programmable Card Issuing Infrastructure - A B2B SaaS
               Platform Solution
             </h4>
-            <p class="text-customGray mb-4 font-bricolage text-base">
+            <p class="text-A3grey mb-4 font-bricolage text-base">
               Sudo Africa provides an infrastructure for businesses and other
               fintechs and financial institutions to issue programmable cards as
               well as facilitate payments.
@@ -223,34 +245,41 @@
             <img
               src="./Assets/images/Frame 1000002316 (3).svg"
               alt=""
-              class="h-auto"
+              class=""
+              loading="lazy"
             />
           </div>
           <div
-            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-[100%] rounded-lg case-study flex-1"
+            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-[100%] rounded-lg case-study absolute flex flex-col flex-grow justify-between md:flex-none"
           >
             <div class="mb-4 flex">
               <div class="">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   Artificial Intelligence
                 </p>
               </div>
               <div class="border-x border-darkGray mx-2 px-2">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   Community
                 </p>
               </div>
               <div class="">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   Lean UX.
                 </p>
               </div>
             </div>
 
-            <h4 class="text-white mb-4 font-recoleta text-2xl">
+            <h4 class="text-customGray mb-4 font-recoleta text-2xl">
               AI Powered Web Application for Digital Creators
             </h4>
-            <p class="text-customGray mb-4 font-bricolage text-base">
+            <p class="text-A3grey mb-4 font-bricolage text-base">
               Bai AI is an AI powered platform that allows creators to create
               digital personas of themselves to interact with their audiences
               and communities.
@@ -259,35 +288,42 @@
             <img
               src="./Assets/images/Frame 1000002316 (5).svg"
               alt=""
-              class="h-auto"
+              class=""
+              loading="lazy"
             />
           </div>
           <div
-            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-[100%] rounded-lg case-study flex-1"
+            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-[100%] rounded-lg case-study absolute flex flex-col justify-between flex-grow md:flex-none"
           >
             <div class="mb-4 flex">
               <div class="">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   Augmented Reality
                 </p>
               </div>
               <div class="border-x border-darkGray mx-2 px-2">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   NFTs.
                 </p>
               </div>
               <div class="">
-                <p class="text-white font-bricolage font-customGray text-xs">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs"
+                >
                   Web3
                 </p>
               </div>
             </div>
 
-            <h4 class="text-white mb-4 font-recoleta text-2xl">
+            <h4 class="text-customGray mb-4 font-recoleta text-2xl">
               Quarky MVP Design - An Interactive Augmented Reality Experience
               for NFTs
             </h4>
-            <p class="text-customGray mb-4 font-bricolage text-base">
+            <p class="text-A3grey mb-4 font-bricolage text-base">
               Quarky is a new way of interacting with art. It leverages
               augmented reality (AR) to create an immersive experience for the
               interaction of NFTs.
@@ -296,12 +332,12 @@
             <img
               src="./Assets/images/Frame 1000002316 (6).svg"
               alt=""
-              class="h-auto"
+              class=""
+              loading="lazy"
             />
           </div>
         </div>
       </div>
-      <!-- </div> -->
     </section>
 
     <footer class="flex flex-col items-center md:mt-[25%] pb-20">
@@ -316,7 +352,7 @@
         <div
           class="relative flex flex-col items-center justify-center z-10 my-12 w-[70%]"
         >
-          <p class="text-white font-recoleta text-2xl text-center mb-8">
+          <p class="text-customGray font-recoleta text-2xl text-center mb-8">
             Got a project, an idea out of the wild, a collaboaration, want to
             talk about design, innovation, strategy?
           </p>
@@ -325,7 +361,7 @@
             </button> -->
           <a
             href=""
-            class="text-offwhite border border-white px-8 py-4 rounded-full"
+            class="text-customGray border border-customGray px-8 py-4 rounded-full"
             >Let's Talk</a
           >
         </div>
@@ -336,23 +372,23 @@
       <div
         class="flex justify-between md:w-[85%] w-[90%] md:items-center my-12 flex-col md:flex-row"
       >
-        <p class="text-white font-bricolage">
+        <p class="text-A3grey font-bricolage">
           ©abasifreke emmanuel all rights reserved.
         </p>
         <!-- <div class="flex justify-between flex-wrap md:w-[50%]"> -->
         <div class="my-8 md:my-0">
-          <p class="text-[#6B7280] text-xs">Send a Mail</p>
-          <a class="text-white font-bricolage underline" href=""
+          <p class="text-[#737373] text-xs">Send a Mail</p>
+          <a class="text-A3grey font-bricolage underline" href=""
             >abasifreke55@gmail.com</a
           >
         </div>
         <div>
-          <p class="text-[#6B7280] text-xs">My Socials</p>
+          <p class="text-[#737373] text-xs">My Socials</p>
           <div>
-            <a class="text-white font-bricolage underline font-light" href=""
+            <a class="text-A3grey font-bricolage underline font-light" href=""
               >instagram.</a
             >
-            <a class="text-white font-bricolage underline font-light" href=""
+            <a class="text-A3grey font-bricolage underline font-light" href=""
               >twitter.</a
             >
           </div>
