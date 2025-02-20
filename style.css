@@ -11,22 +11,8 @@
   font-style: normal;
 }
 
-/* *:not(.case-study) {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
-
 .case-study {
-  /* position: absolute; Ensures stacking */
-  /* top: 20%; */
-  /* width: 100%; */
   right: 0;
-  /* object-fit: cover; */
-  /* height: 100vh; */
-  /* min-height: 500px; */
-  /* height: 800px; */
-  /* height: calc(100vh / 2.5); */
 }
 
 .pagination .active {
