@@ -8,7 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Apply max height using requestAnimationFrame to avoid layout thrashing
   requestAnimationFrame(() => {
-    caseStudies.forEach((cs) => (cs.style.height = `${maxHeight}px`));
+    caseStudies.forEach((cs) => {
+      cs.style.height = `${maxHeight}px`;
+      cs.style.willChange = "transform"; // Helps with smooth animations
+    });
   });
 
   initializeGSAP(maxHeight);
@@ -29,7 +32,35 @@ function initializeGSAP(caseStudyHeight) {
     if (index === 0) return; // Skip first card (no animation needed)
 
     gsap.set(card, { y: index * caseStudyHeight });
-    animation.to(card, { y: 0, duration: index * 0.5, ease: "none" }, 0);
+    // animation.to(card, { y: 0, duration: index * 0.5, ease: "power1.out" }, 0);
+
+    // animation.to(
+    //   card,
+    //   {
+    //     y: 0,
+    //     duration: 0.8, // Smooth but controlled transition
+    //     ease: "power2.out",
+    //     stagger: {
+    //       each: 0.5, // Ensures one card moves at a time
+    //       onComplete: () => {
+    //         if (index < cards.length - 1) {
+    //           gsap.set(cards[index + 1], { position: "absolute", top: 0 });
+    //         }
+    //       },
+    //     },
+    //   },
+    //   index * 0.6
+    // );
+
+    animation.to(
+      card,
+      {
+        y: 0,
+        duration: 0.8, // Smooth transition
+        ease: "power2.out",
+      },
+      index
+    );
   });
 
   ScrollTrigger.create({
@@ -37,9 +68,14 @@ function initializeGSAP(caseStudyHeight) {
     start: "top top",
     pin: true,
     end: `+=${cards.length * caseStudyHeight + header.offsetHeight}`,
-    scrub: true,
+    scrub: 0.4,
     animation: animation,
     markers: false,
+    snap: {
+      snapTo: 1 / (cards.length - 1), // Snap to each section
+      duration: 0.5, // Smooth snapping
+      ease: "power2.inOut",
+    },
     onUpdate: ({ progress }) =>
       updatePagination(progress, cards.length, paginationDots),
   });

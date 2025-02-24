@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abaz portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="../style.css" rel="stylesheet" />
+
+    <script>
+      // Add a custom color using Tailwind's configuration
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              customBlue: "#121212", // Replace this with your custom color code
+              fadeBlack: "#1E1E1E",
+              customGray: "#D4D4D4",
+              yellow: "#F3A53B",
+              darkGray: "#383838",
+              offwhite: "#F5F5F5",
+              A3grey: "#A3A3A3",
+              subtleGray: "#D2D6DC",
+            },
+            fontFamily: {
+              bricolage: ['"Bricolage Grotesque"', "sans-serif"],
+              recoleta: ["Recoleta", "sans-serif"],
+              DM_mono: ["DM Mono", "serif"],
+            },
+
+            screens: {
+              md: "900px", // Customizes the `md` breakpoint to start at 900px
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-customBlue">
+    <section class="flex flex-col items-center">
+      <div class="w-[90%] pb-8 pt-8">
+        <a href="../index.html">
+          <div class="flex">
+            <img src="../Assets/images/arrow-left.svg" alt="arrow-left" />
+            <p class="font-DM-mono text-subtleGray">Back</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-bold font-recoleta text-3xl mb-3">
+          Funge Web App - A Social NFT Trading Platform
+        </p>
+        <p class="text-offwhite font-semibold font-recoleta mb-5">Overview</p>
+        <p class="text-customGray font-bricolage">
+          Funge Platform represents a sophisticated and dynamic social NFT
+          marketplace that offers users a seamless and comprehensive ecosystem
+          for the acquisition, sale, and creation of NFTs. Notably, it leverages
+          the robust capabilities of the Polygon blockchain to provide an
+          optimized experience, characterized by exceptionally low transaction
+          fees. This platform serves as a nexus for individuals passionate about
+          non-fungible tokens, fostering a thriving community of collectors,
+          creators, and enthusiasts. Funge Platform's integration with the
+          Polygon blockchain ensures that users can transact with minimal
+          overhead costs, making it an attractive choice for those seeking
+          cost-effective NFT interactions within the blockchain space
+        </p>
+      </div>
+      <div class="w-[90%] mb-10">
+        <img
+          src="../Assets/images/1511980164 (1).svg"
+          alt="img"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold font-recoleta mb-5">
+          What was the Problem?
+        </p>
+        <p class="text-customGray font-bricolage">
+          The first version of the Funge platform was launched on Android at the
+          MVP stage as a mere NFT market place for buying and selling of NFTs.
+          However there was need to further expand on the scope of the solution
+          based on increased user needs which were gathered from research and
+          user feedbacks. Other than having just a market place, the client
+          wanted to create a more engaging experience between buyers and sellers
+          on the platform while keeping the UX simple enough for any level of
+          user.
+        </p>
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10 flex flex-col items-start">
+        <p class="text-offwhite font-semibold mb-5 text-xl font-recoleta">
+          Solution
+        </p>
+        <p class="text-customGray font-bricolage leading-8">
+          The focus of expanding the project scope was;
+        </p>
+
+        <ul class="pl-4 list-disc">
+          <li class="text-customGray font-bricolage mb-3">
+            To design an NFT platform with a social media approach where users
+            can buy, sell and create NFTs
+          </li>
+          <li class="text-customGray font-bricolage mb-3">
+            To create a Wallet system where users can buy and pay for their
+            assets via credit cards, debit cards and Polygon.
+          </li>
+          <li class="text-customGray font-bricolage mb-3">
+            A learning and rewards system for beginners.
+          </li>
+          <li class="text-customGray font-bricolage mb-3">
+            An Auction feature where users can create an auction for any scarce
+            digital content.
+          </li>
+        </ul>
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold font-recoleta mb-5">My Role</p>
+        <p class="text-customGray font-bricolage">
+          In this project, I was responsible for conducting user research,
+          analysing research data, translating insights to design solutions,
+          managing stakeholders, information architecture, facilitating ideation
+          workshops and visual design. Shout out to Samuel(Product Designer) who
+          was awesome on the design roadmap, coordinating and designing parts of
+          product experience.
+        </p>
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold mb-5 text-2xl font-recoleta">
+          My Approach
+        </p>
+        <p class="text-offwhite font-semibold mb-5 text-xl font-recoleta">
+          Primary Research
+        </p>
+
+        <p class="text-customGray font-bricolage leading-8">
+          Firstly, I reviewed the following resources;
+        </p>
+        <ul class="pl-4 list-disc">
+          <li class="text-customGray font-bricolage mb-3">
+            The existing MVP mobile application
+          </li>
+          <li class="text-customGray font-bricolage mb-3">
+            The feedbacks from community users of the application
+          </li>
+          <li class="text-customGray font-bricolage mb-3">
+            The community discussion channel on Discord
+          </li>
+          <li class="text-customGray font-bricolage mb-3">
+            The Product Roadmap
+          </li>
+        </ul>
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold font-recoleta mb-5">
+          Analysing the Existing Funge MVP
+        </p>
+        <p class="text-customGray font-bricolage">
+          Analysing the Existing Funge MVP I got access to the beta version of
+          the MVP on android to understand how the application functioned end to
+          end. Through interacting with the app, I was able to map the end to
+          end flow of the MVP.
+        </p>
+      </div>
+
+      <div class="w-[90%] mb-10">
+        <img
+          src="../Assets/images/1511980165.svg"
+          alt="img"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold mb-5 text-2xl font-recoleta">
+          Key Findings
+        </p>
+
+        <ul class="pl-4 list-disc">
+          <li class="text-customGray font-bricolage mb-3">
+            I conducted a preliminary assessment of the existing user interface
+            within the application, focusing on a comprehensive review of
+            various visual elements. This evaluation encompassed an examination
+            of aspects such as color schemes, design systems, alignment,
+            hierarchy, typography, and page readability, among others.
+          </li>
+          <li class="text-customGray font-bricolage mb-3">
+            I conducted a comprehensive evaluation of the application's
+            functionality, systematically testing various features by attempting
+            to execute a range of tasks. This examination allowed me to discern
+            areas of effectiveness, identify areas requiring enhancement, and
+            pinpoint aspects that exhibited complete non-functionality.
+          </li>
+          <li class="text-customGray font-bricolage mb-3">
+            One of my primary focal points was the assessment of accessibility,
+            with a particular emphasis on ensuring compliance with global
+            accessibility standards for the Funge app. Given that I was also
+            tasked with a comprehensive visual overhaul, I meticulously
+            documented any instances where the application fell short of these
+            accessibility guidelines.
+          </li>
+          <li class="text-customGray font-bricolage mb-3">
+            As I navigated through the app's user experience, I dedicated myself
+            to mapping out the pre-existing user flows. Concurrently, I took
+            particular care to delineate elements of the application that
+            appeared to introduce complexity into the user experience.
+          </li>
+        </ul>
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold font-recoleta mb-5">
+          Analysing the Existing Funge MVP
+        </p>
+        <p class="text-customGray font-bricolage">
+          Analysing the Existing Funge MVP There was a need to understand the
+          existing users and what their experiences were with the previous MVP
+          version of the Funge Application and I did this by leveraging the
+          feedback channel in the Funge community discord Channel. Below are
+          some of the extracts from there;
+        </p>
+      </div>
+
+      <div class="w-[90%] mb-10">
+        <img
+          src="../Assets/images/1511980166.svg"
+          alt="img"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold font-recoleta mb-5">
+          Gaining User insights
+        </p>
+        <p class="text-customGray font-bricolage">
+          To gain deeper insights into user preferences and ascertain their
+          genuine needs, I initiated a concise survey among our community
+          members. I devoted a significant amount of time and attention to
+          carefully formulating the survey questions to ensure they accurately
+          captured the specific information I sought
+        </p>
+      </div>
+
+      <div class="w-[90%] mb-10">
+        <img
+          src="../Assets/images/1511980167.svg"
+          alt="img"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold font-recoleta mb-5">
+          Key Findings
+        </p>
+        <p class="text-customGray font-bricolage leading-8">
+          The survey recorded Over 110 respondents. Below are the insights I
+          gathered.
+        </p>
+        <div>
+          <!-- I don't know yet -->
+        </div>
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold font-recoleta mb-5">
+          User Personas
+        </p>
+        <p class="text-customGray font-bricolage leading-8">
+          I created three different user personas to represent three set of
+          users which were;
+        </p>
+        <ul class="pl-4 list-disc">
+          <li class="text-customGray font-bricolage mb-3">
+            Newbies in the Web 3 space
+          </li>
+          <li class="text-customGray font-bricolage mb-3">Creators,</li>
+          <li class="text-customGray font-bricolage mb-3">
+            Buyers and Sellers of NFTs
+          </li>
+        </ul>
+      </div>
+
+      <div class="w-[90%] mb-10">
+        <img
+          src="../Assets/images/1511980164.svg"
+          alt="img"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold font-recoleta mb-5">
+          Competitive Analysis
+        </p>
+        <p class="text-customGray font-bricolage leading-8">
+          Through the survey, I successfully identified several competitors in
+          the Funge NFT Marketplace space. Subsequently, I conducted a succinct
+          yet comprehensive competitive analysis, focusing on discerning their
+          strengths and pinpointing opportunities for capitalizing on their
+          weaknesses. Among the noteworthy competitors that I examined included
+        </p>
+        <ul class="pl-4 list-disc">
+          <li class="text-customGray font-bricolage mb-3">Openseas</li>
+          <li class="text-customGray font-bricolage mb-3">Looksrare</li>
+          <li class="text-customGray font-bricolage mb-3">Rarible</li>
+        </ul>
+      </div>
+
+      <div class="w-[90%] mb-10">
+        <img
+          src="../Assets/images/1511980169.svg"
+          alt="img"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold font-recoleta mb-5">
+          Key Insights from the Primary Research
+        </p>
+        <p class="text-customGray font-bricolage">
+          Having direct insights from Funge community members played a pivotal
+          role in shaping the bedrock of our primary research efforts. Guided by
+          the principles of User-Centered Design, we delved deep into uncovering
+          user pain points. Through our primary research, we gained valuable
+          insights into the early users' experiences with the MVP and gained a
+          sense of their initial expectations. The primary research facilitated
+          a crucial alignment between the business objectives and user needs.
+          This alignment proved instrumental in our endeavor to prioritize
+          feature development, a critical task given our time constraints.
+        </p>
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold font-recoleta mb-5">
+          Information Architecture
+        </p>
+        <p class="text-customGray font-bricolage">
+          Having carefully collected essential insights through multiple rounds
+          of idea exchange, moodboarding, and sketching, we proceeded to
+          construct the user flows for the various use cases and features. To
+          ensure clarity and ease of comprehension, I divided these user flows
+          into manageable sections, avoiding unnecessary complexity. While I
+          cannot present the entirety of the flow diagrams here, I have included
+          select components below for reference
+        </p>
+      </div>
+
+      <!-- insert the correct image -->
+      <!-- <div class="w-[90%] mb-10">
+        <img
+          src="../Assets/images/1511980164.svg"
+          alt="img"
+          class="w-full h-auto"
+        />
+      </div> -->
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold font-recoleta mb-5">
+          Reusable Component Library
+        </p>
+        <p class="text-customGray font-bricolage">
+          To commence this phase of the design, my initial step involved
+          accessing and conducting a thorough audit of the existing brand kits.
+          This in-depth examination of the pre-existing kits, undertaken with a
+          focus on scalability, enabled me to enact a comprehensive
+          restructuring of the component library . My primary goal was to
+          reinstate a high level of design consistency by crafting reusable
+          brand components and assets, encompassing elements like typography,
+          color palettes, icons, and grid systems, among others
+        </p>
+      </div>
+
+      <div class="w-[90%] mb-10">
+        <img
+          src="../Assets/images/1511980171 (3).svg"
+          alt="img"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold font-recoleta mb-5">
+          HIFI Designs
+        </p>
+        <p class="text-customGray font-bricolage">
+          I collaborated with the Samuel to pull the designs off on figma with
+          series of Iterations. We got all the team members to collaborate and
+          make necessary contributions while the designs were going on. This was
+          one way to get everyone to pull in the same direction.
+        </p>
+      </div>
+
+      <div class="w-[90%] mb-10">
+        <img
+          src="../Assets/images/1511980172 (1).svg"
+          alt="img"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="md:w-[60%] w-[90%] mb-10">
+        <p class="text-offwhite font-semibold font-recoleta mb-5">
+          Final Words
+        </p>
+        <p class="text-customGray font-bricolage">
+          Working on this project further emphasized the importance of employing
+          a data driven approach to design problems. Initially, design decisions
+          were influenced by stakeholders biases and there was a huge gap
+          between the delivered product and user needs as noticed from the
+          research. I balanced this out by introducing a data driven approach.
+          Unfortunately, I didn’t see the implementation of this project due to
+          budget constraints from the client. I would have loved to conduct
+          series of user testing with the community members of all levels.
+        </p>
+      </div>
+    </section>
+
+    <footer class="flex flex-col items-center mt-10 pb-20">
+      <div
+        class="md:w-[85%] w-[90%] px-2 py-2 bg-fadeBlack relative flex flex-col items-center mb-14 rounded-lg"
+      >
+        <img
+          src="../Assets/images/Mask group.svg"
+          class="absolute inset-0 w-[100%] h-[100%] object-center mx-auto my-auto"
+          alt=""
+        />
+        <div
+          class="relative flex flex-col items-center justify-center z-10 my-12 w-[70%]"
+        >
+          <p class="text-customGray font-recoleta text-2xl text-center mb-8">
+            Thanks for Reading. Want to check out more case studies?
+          </p>
+
+          <a
+            href=""
+            class="text-customGray border border-customGray px-8 py-4 rounded-full"
+            >View Case Studies</a
+          >
+        </div>
+      </div>
+
+      <div class="h-px bg-darkGray w-full"></div>
+      <div
+        class="flex justify-between md:w-[85%] w-[90%] md:items-center my-12 flex-col md:flex-row"
+      >
+        <p class="text-A3grey font-bricolage">
+          ©abasifreke emmanuel all rights reserved.
+        </p>
+        <!-- <div class="flex justify-between flex-wrap md:w-[50%]"> -->
+        <div class="my-8 md:my-0">
+          <p class="text-[#737373] text-xs">Send a Mail</p>
+          <a class="text-A3grey font-bricolage underline" href=""
+            >abasifreke55@gmail.com</a
+          >
+        </div>
+        <div>
+          <p class="text-[#737373] text-xs">My Socials</p>
+          <div>
+            <a class="text-A3grey font-bricolage underline font-light" href=""
+              >instagram.</a
+            >
+            <a class="text-A3grey font-bricolage underline font-light" href=""
+              >twitter.</a
+            >
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </footer>
+  </body>
+</html>

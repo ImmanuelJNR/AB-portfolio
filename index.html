@@ -35,6 +35,12 @@
             screens: {
               md: "900px", // Customizes the `md` breakpoint to start at 900px
             },
+
+            backgroundImage: {
+              "background-pattern": "url('./Assets/images/Mask group (1).svg')",
+              "background-pattern-mobile":
+                "url('./Assets/images/Mask group (2).svg')",
+            },
           },
         },
       };
@@ -51,13 +57,15 @@
     <header class="flex flex-col items-center pb-8 h-[100vh] md:pb-px">
       <nav class="flex justify-between md:w-[85%] w-[90%] pt-8 pb-8">
         <img src="./Assets/images/logo (2).svg" class="w-[80px]" alt="" />
-        <div class="flex items-center">
-          <a href="" class="text-A3grey hidden md:flex font-bricolage"
+        <div class="flex items-center justify-between gap-4">
+          <a
+            href=""
+            class="text-A3grey hidden md:flex flex-shrink-0 font-bricolag text-base md:text-xl"
             >My Resume</a
           >
           <a
             href=""
-            class="text-A3grey border border-white px-8 py-4 ml-6 rounded-full hidden md:flex font-bricolage"
+            class="text-A3grey border border-white py-3 px-6 rounded-full hidden md:block font-bricolage w-full text-center h-full text-base md:text-xl"
             >Let's Talk</a
           >
         </div>
@@ -72,17 +80,21 @@
               class="w-[8%] min-w-[70px]"
             />
           </div>
-          <p class="font-bricolage text-A3grey mb-4 text-base">
+          <p class="font-bricolage text-A3grey mb-4 text-base md:text-xl">
             Hello There, I'm
             <span class="font-semibold text-customGray">Abasifreke</span> and I
             am a...
           </p>
           <!-- <h1 class="text-white text-9xl">UX Designer</h1> -->
           <img class="my-8" src="./Assets/images/heroImage.svg" alt="" />
-          <div class="md:flex md:justify-between md:flex-row flex-col">
-            <div class="h-px bg-darkGray md:w-[35%] w-full md:mb-px mb-5"></div>
+          <div
+            class="md:flex md:justify-between md:flex-row flex-col md:items-start"
+          >
+            <div
+              class="h-px bg-darkGray md:w-[35%] w-full md:mb-px md:mt-4 mb-5"
+            ></div>
             <div class="md:w-[60%] font-white">
-              <p class="text-A3grey font-bricolage text-base">
+              <p class="text-A3grey font-bricolage text-base md:text-xl">
                 As a strategic design professional, I specialize in designing
                 creative and delightful user experiences through innovative
                 design thinking and value-driven methodology. My approach
@@ -99,15 +111,17 @@
     <!-- case study section -->
     <!-- page should pin here -->
     <section
-      class="flex items-center flex-col wrapper justify-center mt-[50px] mb-[50px] md:mb-[100px]"
+      class="flex items-center flex-col wrapper mt-[20%] mb-[25%] md:bg-background-pattern bg-cover bg-center h-[100vh]"
     >
-      <div class="md:w-[85%] w-[90%] mb-8 pinn">
-        <p class="text-customGray text-left font-recoleta font-bold text-3xl">
+      <div class="md:w-[85%] w-[90%] mb-10 pinn">
+        <p
+          class="text-customGray text-left font-recoleta font-extrabold text-3xl md:text-5xl"
+        >
           Selected case studies
         </p>
       </div>
       <div
-        class="flex md:w-[85%] w-[90%] justify-center md:justify-between h-[100vh] mt-[10%]"
+        class="flex md:w-[85%] w-[90%] justify-center md:justify-between h-[100%] relative"
       >
         <!-- <div></div> -->
         <div class="hidden md:flex flex-col pagination w-[5%]">
@@ -126,230 +140,305 @@
         <!-- only the containers inside here should scroll and the scrolling should happen in a way the second should scroll on top of the first, third on top of the second till the scrolling of this section complete and then unpin -->
         <div class="w-[100%] md:w-[90%] relative flex flex-col">
           <div
-            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1"
+            class="bg-fadeBlack md:py-4 py-2 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1"
           >
-            <div class="mb-4 flex">
+            <div class="mb-4 flex md:mx-10 mx-6">
               <div class="">
                 <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
                 >
                   Wellness
                 </p>
               </div>
               <div class="border-x border-darkGray mx-2 px-2">
                 <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
                 >
                   Health
                 </p>
               </div>
               <div class="">
                 <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
                 >
                   UX Strategy
                 </p>
               </div>
             </div>
 
-            <h4 class="text-customGray mb-4 font-recoleta text-2xl">
+            <h4
+              class="text-customGray mb-4 font-recoleta text-2xl md:mx-10 mx-6"
+            >
               Mental Power - A Wellness and Self Improvement Application
             </h4>
-            <p class="text-A3grey mb-2 font-bricolage text-base">
+            <p
+              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] md:mx-10 mx-6 mb-4 md:line-clamp-2"
+            >
               The mental power application is a self improvement application
               that combines the capabilities of three synergistic apps,
               empowering users with globally recognised techniques to create,
               transform, or enhance their realities.
             </p>
             <a
-              class="text-yellow mb-6 font-recoleta"
+              class="text-yellow mb-6 font-recoleta md:mx-10 mx-6 text-base md:text-xl"
               href="./pages/mental-power-page.html"
-              >view case study</a
+              >View Case Study</a
             >
-            <div class="flex-1 flex items-center justify-center">
-              <img
-                src="./Assets/images/Frame 1000002316.svg"
-                class="rounded-lg h-[100%] w-full object-cover"
-                alt="img"
-              />
+            <div class="flex-1 flex items-center justify-center md:mx-5 mx-4">
+              <a href="./pages/mental-power-page.html">
+                <img
+                  src="./Assets/images/Frame 1000002316.svg"
+                  class="rounded-lg h-[100%] w-full object-cover"
+                  alt="img"
+                />
+              </a>
             </div>
           </div>
 
           <div
-            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1"
+            class="bg-fadeBlack md:py-4 py-2 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1"
           >
-            <div class="mb-4 flex">
+            <div class="mb-4 flex md:mx-10 mx-6">
               <div class="">
                 <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
                 >
                   Social
                 </p>
               </div>
               <div class="border-x border-darkGray mx-2 px-2">
                 <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
                 >
                   Blockchain
                 </p>
               </div>
               <div class="">
                 <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
                 >
                   Web3
                 </p>
               </div>
             </div>
 
-            <h4 class="text-customGray mb-4 font-recoleta text-2xl">
+            <h4
+              class="text-customGray mb-4 font-recoleta text-2xl md:mx-10 mx-6"
+            >
               Funge Web App - A Social NFT Trading Platform
             </h4>
-            <p class="text-A3grey mb-4 font-bricolage text-base">
+            <!-- <div class="w-[100%] md:w-[75%] md:mx-10 mx-6 mb-4 mb-2"> -->
+            <p
+              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] md:mx-10 mx-6 mb-4"
+            >
               Funge Platform is a social NFT marketplace to buy, sell and create
               NFTs seamlessly and It is powered by the polygon blockchain for
               ultra-low gas fees.
             </p>
-            <a class="text-yellow mb-6 font-recoleta">view case study</a>
-            <div class="flex-1 flex items-center justify-center">
-              <img
-                src="./Assets/images/Frame 1000002316 (2).svg"
-                alt="img"
-                class="rounded-lg h-[100%] w-full object-cover"
-              />
+            <!-- </div> -->
+            <a
+              class="text-yellow mb-6 font-recoleta md:mx-10 mx-6 text-base md:text-xl"
+              href="./pages/Funge-web-app-page.html"
+              >View Case Study</a
+            >
+            <div class="flex-1 flex items-center justify-center md:mx-5 mx-4">
+              <a href="./pages/Funge-web-app-page.html">
+                <img
+                  src="./Assets/images/Frame 1000002316 (2).svg"
+                  alt="img"
+                  class="rounded-lg h-[100%] w-full object-cover"
+                />
+              </a>
             </div>
           </div>
+
           <div
-            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-full rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex items-stretch flex-col flex-1"
+            class="bg-fadeBlack md:py-4 py-2 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1 justify-center"
           >
-            <div class="mb-4 flex">
+            <div class="mb-4 flex md:mx-10 mx-6">
               <div class="">
                 <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
-                >
-                  SaaS
-                </p>
-              </div>
-              <div class="border-x border-darkGray mx-2 px-2">
-                <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
-                >
-                  B2B
-                </p>
-              </div>
-              <div class="">
-                <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
-                >
-                  Fintech
-                </p>
-              </div>
-            </div>
-
-            <h4 class="text-customGray mb-4 font-recoleta text-2xl">
-              Sudo Programmable Card Issuing Infrastructure - A B2B SaaS
-              Platform Solution
-            </h4>
-            <p class="text-A3grey mb-4 font-bricolage text-base">
-              Sudo Africa provides an infrastructure for businesses and other
-              fintechs and financial institutions to issue programmable cards as
-              well as facilitate payments.
-            </p>
-            <p class="text-yellow mb-6 font-recoleta">view case study</p>
-
-            <div class="flex-1 flex items-center justify-center">
-              <img
-                src="./Assets/images/Frame 1000002316 (3).svg"
-                alt="img"
-                class="rounded-lg h-[100%] w-full object-cover"
-              />
-            </div>
-          </div>
-          <div
-            class="bg-fadeBlack md:py-4 md:px-6 py-2 px-4 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1"
-          >
-            <div class="mb-4 flex">
-              <div class="">
-                <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
-                >
-                  Artificial Intelligence
-                </p>
-              </div>
-              <div class="border-x border-darkGray mx-2 px-2">
-                <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
-                >
-                  Community
-                </p>
-              </div>
-              <div class="">
-                <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
-                >
-                  Lean UX.
-                </p>
-              </div>
-            </div>
-
-            <h4 class="text-customGray mb-4 font-recoleta text-2xl">
-              AI Powered Web Application for Digital Creators
-            </h4>
-            <p class="text-A3grey mb-4 font-bricolage text-base">
-              Bai AI is an AI powered platform that allows creators to create
-              digital personas of themselves to interact with their audiences
-              and communities.
-            </p>
-            <p class="text-yellow mb-6 font-recoleta">view case study</p>
-
-            <div class="flex-1 flex items-center justify-center">
-              <img
-                src="./Assets/images/Frame 1000002316 (5).svg"
-                alt="img"
-                class="rounded-lg h-[100%] w-full object-cover"
-              />
-            </div>
-          </div>
-          <div
-            class="bg-fadeBlack md:py-[2%] md:px-6 py-2 px-4 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1"
-          >
-            <div class="mb-4 flex">
-              <div class="">
-                <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
                 >
                   Augmented Reality
                 </p>
               </div>
               <div class="border-x border-darkGray mx-2 px-2">
                 <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
                 >
                   NFTs.
                 </p>
               </div>
               <div class="">
                 <p
-                  class="text-customGray font-bricolage font-customGray text-xs"
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
                 >
                   Web3
                 </p>
               </div>
             </div>
 
-            <h4 class="text-customGray mb-4 font-recoleta text-2xl">
+            <h4
+              class="text-customGray mb-4 font-recoleta text-2xl md:mx-10 mx-6"
+            >
               Quarky MVP Design - An Interactive Augmented Reality Experience
               for NFTs
             </h4>
-            <p class="text-A3grey mb-4 font-bricolage text-base">
+
+            <p
+              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] md:mx-10 mx-6 mb-4"
+            >
               Quarky is a new way of interacting with art. It leverages
               augmented reality (AR) to create an immersive experience for the
               interaction of NFTs.
             </p>
-            <p class="text-yellow mb-6 font-recoleta">view case study</p>
-            <div class="flex-1 flex items-center justify-center">
+
+            <a
+              class="text-yellow mb-6 font-recoleta md:mx-10 mx-6 text-base md:text-xl"
+              href="#"
+              >View Case Study</a
+            >
+            <div class="flex-1 flex items-center justify-center md:mx-5 mx-4">
               <img
                 src="./Assets/images/Frame 1000002316 (6).svg"
+                alt="img"
+                class="rounded-lg h-[100%] w-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div
+            class="bg-fadeBlack md:py-4 py-2 w-full rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex items-stretch flex-col flex-1"
+          >
+            <div
+              class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg"
+            ></div>
+
+            <div class="absolute inset-0 flex items-center justify-center">
+              <p
+                class="text-white text-3xl font-recoleta text-customGray font-bold"
+              >
+                Coming Soon
+              </p>
+            </div>
+            <div class="mb-4 flex md:mx-10 mx-6">
+              <div class="">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
+                >
+                  SaaS
+                </p>
+              </div>
+              <div class="border-x border-darkGray mx-2 px-2">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
+                >
+                  B2B
+                </p>
+              </div>
+              <div class="">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
+                >
+                  Fintech
+                </p>
+              </div>
+            </div>
+
+            <h4
+              class="text-customGray mb-4 font-recoleta text-2xl md:mx-10 mx-6"
+            >
+              Sudo Programmable Card Issuing Infrastructure - A B2B SaaS
+              Platform Solution
+            </h4>
+            <!-- <div class="w-[100%] md:w-[75%] md:mx-10 mx-6 mb-4"> -->
+            <p
+              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] md:mx-10 mx-6 mb-4"
+            >
+              Sudo Africa provides an infrastructure for businesses and other
+              fintechs and financial institutions to issue programmable cards as
+              well as facilitate payments.
+            </p>
+            <!-- </div> -->
+            <a
+              class="text-yellow mb-6 font-recoleta md:mx-10 mx-6 text-base md:text-xl"
+              href=""
+              >View Case Study</a
+            >
+            <div class="flex-1 flex items-center justify-center md:mx-5 mx-4">
+              <a href="">
+                <img
+                  src="./Assets/images/Frame 1000002316 (3).svg"
+                  alt="img"
+                  class="rounded-lg h-[100%] w-full object-cover"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-fadeBlack md:py-4 py-2 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1"
+          >
+            <div
+              class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg"
+            ></div>
+
+            <div class="absolute inset-0 flex items-center justify-center">
+              <p
+                class="text-white text-3xl font-recoleta text-customGray font-bold"
+              >
+                Coming Soon
+              </p>
+            </div>
+            <div class="mb-4 flex md:mx-10 mx-6">
+              <div class="">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
+                >
+                  Artificial Intelligence
+                </p>
+              </div>
+              <div class="border-x border-darkGray mx-2 px-2">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
+                >
+                  Community
+                </p>
+              </div>
+              <div class="">
+                <p
+                  class="text-customGray font-bricolage font-customGray text-xs md:text-base"
+                >
+                  Lean UX.
+                </p>
+              </div>
+            </div>
+
+            <h4
+              class="text-customGray mb-4 font-recoleta text-2xl md:mx-10 mx-6"
+            >
+              AI Powered Web Application for Digital Creators
+            </h4>
+
+            <!-- <div class="w-[100%] md:w-[75%] md:mx-10 mx-6 mb-4"> -->
+            <p
+              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] md:mx-10 mx-6 mb-4"
+            >
+              Bai AI is an AI powered platform that allows creators to create
+              digital personas of themselves to interact with their audiences
+              and communities.
+            </p>
+            <!-- </div> -->
+            <a
+              class="text-yellow mb-6 font-recoleta md:mx-10 mx-6 text-base md:text-xl"
+              href="#"
+              >View Case Study</a
+            >
+
+            <div class="flex-1 flex items-center justify-center md:mx-5 mx-4">
+              <img
+                src="./Assets/images/Frame 1000002316 (5).svg"
                 alt="img"
                 class="rounded-lg h-[100%] w-full object-cover"
               />
@@ -359,21 +448,29 @@
       </div>
     </section>
 
-    <footer class="flex flex-col items-center mt-[15%] md:mt-[25%] pb-20">
+    <footer class="flex flex-col items-center mt-[30%] md:mt-[20%] pb-20">
       <div
         class="md:w-[85%] w-[90%] px-2 py-2 bg-fadeBlack relative flex flex-col items-center mb-14"
       >
         <img
           src="./Assets/images/Mask group.svg"
-          class="absolute inset-0 w-[100%] h-[100%] object-center mx-auto my-auto"
+          class="absolute inset-0 w-[100%] h-[100%] object-center mx-auto my-auto sm:hidden"
+          alt=""
+        />
+        <img
+          src="./Assets/images/Mask group (3).svg"
+          class="absolute inset-0 w-[100%] h-[100%] object-center mx-auto my-auto md:hidden"
           alt=""
         />
         <div
           class="relative flex flex-col items-center justify-center z-10 my-12 w-[70%]"
         >
-          <p class="text-customGray font-recoleta text-2xl text-center mb-8">
-            Got a project, an idea out of the wild, a collaboaration, want to
-            talk about design, innovation, strategy?
+          <p
+            class="text-customGray font-recoleta text-2xl md:text-5xl text-center mb-8"
+          >
+            Got a project, an idea out of the wild, a collaboaration,
+            <br class="hidden md:flex" />
+            want to talk about design, innovation, strategy?
           </p>
           <!-- <button class="text-offwhite font-bricolage border border-white rounded-full py-2 px-6 hover:bg-white hover:text-black transition duration-300 cursor">
                 Let's Talk
