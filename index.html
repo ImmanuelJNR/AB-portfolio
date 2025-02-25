@@ -40,6 +40,20 @@
               "background-pattern": "url('./Assets/images/Mask group (1).svg')",
               "background-pattern-mobile":
                 "url('./Assets/images/Mask group (2).svg')",
+              "Case-study-img1": "url('./Assets/images/Frame 1000002316.svg')",
+              "Case-study-img2":
+                "url('./Assets/images/Frame 1000002316 (2).svg')",
+              "Case-study-img3":
+                "url('./Assets/images/Frame 1000002316 (6).svg')",
+              "Case-study-img4":
+                "url('./Assets/images/Frame 1000002316 (3).svg')",
+              "Case-study-img5":
+                "url('./Assets/images/Frame 1000002316 (5).svg')",
+            },
+
+            backgroundPosition: {
+              "right-20": "center right 20%",
+              "top-100": "center top 100%",
             },
           },
         },
@@ -94,7 +108,9 @@
               class="h-px bg-darkGray md:w-[35%] w-full md:mb-px md:mt-4 mb-5"
             ></div>
             <div class="md:w-[60%] font-white">
-              <p class="text-A3grey font-bricolage text-base md:text-xl">
+              <p
+                class="text-A3grey font-bricolage text-base md:text-xl leading-normal xl:leading-8"
+              >
                 As a strategic design professional, I specialize in designing
                 creative and delightful user experiences through innovative
                 design thinking and value-driven methodology. My approach
@@ -108,16 +124,14 @@
       </div>
     </header>
 
-    <!-- case study section -->
-    <!-- page should pin here -->
     <section
-      class="flex items-center flex-col wrapper mt-[20%] mb-[25%] md:bg-background-pattern bg-cover bg-center h-[100vh]"
+      class="flex items-center flex-col wrapper mt-[20%] md:mt-[10%] pb-[25%] md:bg-background-pattern bg-cover h-[100vh]"
     >
-      <div class="md:w-[85%] w-[90%] mb-10 pinn">
+      <div class="md:w-[85%] w-[90%] mb-14 xl:mb-20 pinn">
         <p
-          class="text-customGray text-left font-recoleta font-extrabold text-3xl md:text-5xl"
+          class="text-customGray text-left font-recoleta font-semibold text-3xl md:text-5xl"
         >
-          Selected case studies
+          Selected Case Studies
         </p>
       </div>
       <div
@@ -137,12 +151,11 @@
           <!-- Non-active -->
         </div>
 
-        <!-- only the containers inside here should scroll and the scrolling should happen in a way the second should scroll on top of the first, third on top of the second till the scrolling of this section complete and then unpin -->
         <div class="w-[100%] md:w-[90%] relative flex flex-col">
           <div
-            class="bg-fadeBlack md:py-4 py-2 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1"
+            class="bg-fadeBlack md:py-4 py-2 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col justify-center items-stretch flex-1"
           >
-            <div class="mb-4 flex md:mx-10 mx-6">
+            <div class="mb-4 flex md:mx-12 mx-6">
               <div class="">
                 <p
                   class="text-customGray font-bricolage font-customGray text-xs md:text-base"
@@ -167,12 +180,12 @@
             </div>
 
             <h4
-              class="text-customGray mb-4 font-recoleta text-2xl md:mx-10 mx-6"
+              class="text-customGray mb-4 font-recoleta text-2xl md:mx-12 mx-6"
             >
               Mental Power - A Wellness and Self Improvement Application
             </h4>
             <p
-              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] md:mx-10 mx-6 mb-4 md:line-clamp-2"
+              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] lg:max-w-[60vw] md:mx-12 mx-6 mb-4"
             >
               The mental power application is a self improvement application
               that combines the capabilities of three synergistic apps,
@@ -180,25 +193,21 @@
               transform, or enhance their realities.
             </p>
             <a
-              class="text-yellow mb-6 font-recoleta md:mx-10 mx-6 text-base md:text-xl"
+              class="text-yellow mb-6 font-recoleta md:mx-12 mx-6 text-base md:text-xl"
               href="./pages/mental-power-page.html"
               >View Case Study</a
             >
-            <div class="flex-1 flex items-center justify-center md:mx-5 mx-4">
-              <a href="./pages/mental-power-page.html">
-                <img
-                  src="./Assets/images/Frame 1000002316.svg"
-                  class="rounded-lg h-[100%] w-full object-cover"
-                  alt="img"
-                />
-              </a>
-            </div>
+
+            <div
+              class="flex-1 flex items-center justify-center md:mx-5 mx-4 bg-Case-study-img1 bg-cover bg-center rounded-lg"
+              onclick="window.location.href='./pages/mental-power-page.html' "
+            ></div>
           </div>
 
           <div
-            class="bg-fadeBlack md:py-4 py-2 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1"
+            class="bg-fadeBlack md:py-4 py-2 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch justify-center flex-1"
           >
-            <div class="mb-4 flex md:mx-10 mx-6">
+            <div class="mb-4 flex md:mx-12 mx-6">
               <div class="">
                 <p
                   class="text-customGray font-bricolage font-customGray text-xs md:text-base"
@@ -223,13 +232,13 @@
             </div>
 
             <h4
-              class="text-customGray mb-4 font-recoleta text-2xl md:mx-10 mx-6"
+              class="text-customGray mb-4 font-recoleta text-2xl md:mx-12 mx-6"
             >
               Funge Web App - A Social NFT Trading Platform
             </h4>
             <!-- <div class="w-[100%] md:w-[75%] md:mx-10 mx-6 mb-4 mb-2"> -->
             <p
-              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] md:mx-10 mx-6 mb-4"
+              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] lg:max-w-[60vw] md:mx-12 mx-6 mb-4"
             >
               Funge Platform is a social NFT marketplace to buy, sell and create
               NFTs seamlessly and It is powered by the polygon blockchain for
@@ -237,25 +246,20 @@
             </p>
             <!-- </div> -->
             <a
-              class="text-yellow mb-6 font-recoleta md:mx-10 mx-6 text-base md:text-xl"
+              class="text-yellow mb-6 font-recoleta md:mx-12 mx-6 text-base md:text-xl"
               href="./pages/Funge-web-app-page.html"
               >View Case Study</a
             >
-            <div class="flex-1 flex items-center justify-center md:mx-5 mx-4">
-              <a href="./pages/Funge-web-app-page.html">
-                <img
-                  src="./Assets/images/Frame 1000002316 (2).svg"
-                  alt="img"
-                  class="rounded-lg h-[100%] w-full object-cover"
-                />
-              </a>
-            </div>
+            <div
+              class="flex-1 flex items-center justify-center md:mx-5 mx-4 bg-Case-study-img2 bg-cover bg-center rounded-lg"
+              onclick="window.location.href='./pages/Funge-web-app-page.html' "
+            ></div>
           </div>
 
           <div
             class="bg-fadeBlack md:py-4 py-2 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1 justify-center"
           >
-            <div class="mb-4 flex md:mx-10 mx-6">
+            <div class="mb-4 flex md:mx-12 mx-6">
               <div class="">
                 <p
                   class="text-customGray font-bricolage font-customGray text-xs md:text-base"
@@ -280,14 +284,14 @@
             </div>
 
             <h4
-              class="text-customGray mb-4 font-recoleta text-2xl md:mx-10 mx-6"
+              class="text-customGray mb-4 font-recoleta text-2xl md:mx-12 mx-6"
             >
               Quarky MVP Design - An Interactive Augmented Reality Experience
               for NFTs
             </h4>
 
             <p
-              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] md:mx-10 mx-6 mb-4"
+              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] lg:max-w-[60vw] md:mx-12 mx-6 mb-4"
             >
               Quarky is a new way of interacting with art. It leverages
               augmented reality (AR) to create an immersive experience for the
@@ -295,17 +299,15 @@
             </p>
 
             <a
-              class="text-yellow mb-6 font-recoleta md:mx-10 mx-6 text-base md:text-xl"
+              class="text-yellow mb-6 font-recoleta md:mx-12 mx-6 text-base md:text-xl"
               href="#"
               >View Case Study</a
             >
-            <div class="flex-1 flex items-center justify-center md:mx-5 mx-4">
-              <img
-                src="./Assets/images/Frame 1000002316 (6).svg"
-                alt="img"
-                class="rounded-lg h-[100%] w-full object-cover"
-              />
-            </div>
+
+            <div
+              class="flex-1 flex items-center justify-center md:mx-5 mx-4 bg-Case-study-img3 bg-cover bg-center rounded-lg"
+              onclick="window.location.href='#' "
+            ></div>
           </div>
 
           <div
@@ -322,7 +324,7 @@
                 Coming Soon
               </p>
             </div>
-            <div class="mb-4 flex md:mx-10 mx-6">
+            <div class="mb-4 flex md:mx-12 mx-6">
               <div class="">
                 <p
                   class="text-customGray font-bricolage font-customGray text-xs md:text-base"
@@ -347,14 +349,14 @@
             </div>
 
             <h4
-              class="text-customGray mb-4 font-recoleta text-2xl md:mx-10 mx-6"
+              class="text-customGray mb-4 font-recoleta text-2xl md:mx-12 mx-6"
             >
               Sudo Programmable Card Issuing Infrastructure - A B2B SaaS
               Platform Solution
             </h4>
             <!-- <div class="w-[100%] md:w-[75%] md:mx-10 mx-6 mb-4"> -->
             <p
-              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] md:mx-10 mx-6 mb-4"
+              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] md:mx-12 mx-6 mb-4 lg:max-w-[60vw]"
             >
               Sudo Africa provides an infrastructure for businesses and other
               fintechs and financial institutions to issue programmable cards as
@@ -362,19 +364,15 @@
             </p>
             <!-- </div> -->
             <a
-              class="text-yellow mb-6 font-recoleta md:mx-10 mx-6 text-base md:text-xl"
+              class="text-yellow mb-6 font-recoleta md:mx-12 mx-6 text-base md:text-xl"
               href=""
               >View Case Study</a
             >
-            <div class="flex-1 flex items-center justify-center md:mx-5 mx-4">
-              <a href="">
-                <img
-                  src="./Assets/images/Frame 1000002316 (3).svg"
-                  alt="img"
-                  class="rounded-lg h-[100%] w-full object-cover"
-                />
-              </a>
-            </div>
+
+            <div
+              class="flex-1 flex items-center justify-center md:mx-5 mx-4 bg-Case-study-img4 bg-cover bg-center rounded-lg"
+              onclick="window.location.href='./pages/Funge-web-app-page.html' "
+            ></div>
           </div>
 
           <div
@@ -391,7 +389,7 @@
                 Coming Soon
               </p>
             </div>
-            <div class="mb-4 flex md:mx-10 mx-6">
+            <div class="mb-4 flex md:mx-12 mx-6">
               <div class="">
                 <p
                   class="text-customGray font-bricolage font-customGray text-xs md:text-base"
@@ -416,14 +414,14 @@
             </div>
 
             <h4
-              class="text-customGray mb-4 font-recoleta text-2xl md:mx-10 mx-6"
+              class="text-customGray mb-4 font-recoleta text-2xl md:mx-12 mx-6"
             >
               AI Powered Web Application for Digital Creators
             </h4>
 
             <!-- <div class="w-[100%] md:w-[75%] md:mx-10 mx-6 mb-4"> -->
             <p
-              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] md:mx-10 mx-6 mb-4"
+              class="text-A3grey font-bricolage text-base md:text-xl w-[90%] max-w-[70vw] lg:max-w-[60vw] md:mx-12 mx-6 mb-4"
             >
               Bai AI is an AI powered platform that allows creators to create
               digital personas of themselves to interact with their audiences
@@ -431,30 +429,27 @@
             </p>
             <!-- </div> -->
             <a
-              class="text-yellow mb-6 font-recoleta md:mx-10 mx-6 text-base md:text-xl"
+              class="text-yellow mb-6 font-recoleta md:mx-12 mx-6 text-base md:text-xl"
               href="#"
               >View Case Study</a
             >
 
-            <div class="flex-1 flex items-center justify-center md:mx-5 mx-4">
-              <img
-                src="./Assets/images/Frame 1000002316 (5).svg"
-                alt="img"
-                class="rounded-lg h-[100%] w-full object-cover"
-              />
-            </div>
+            <div
+              class="flex-1 flex items-center justify-center md:mx-5 mx-4 bg-Case-study-img2 bg-cover bg-center rounded-lg"
+              onclick="window.location.href='#' "
+            ></div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="flex flex-col items-center mt-[30%] md:mt-[20%] pb-20">
+    <footer class="flex flex-col items-center pt-[25%] md:pt-[18%] pb-20">
       <div
         class="md:w-[85%] w-[90%] px-2 py-2 bg-fadeBlack relative flex flex-col items-center mb-14"
       >
         <img
           src="./Assets/images/Mask group.svg"
-          class="absolute inset-0 w-[100%] h-[100%] object-center mx-auto my-auto sm:hidden"
+          class="absolute inset-0 w-[100%] h-[100%] object-center mx-auto my-auto sm:hidden md:block"
           alt=""
         />
         <img
@@ -466,7 +461,7 @@
           class="relative flex flex-col items-center justify-center z-10 my-12 w-[70%]"
         >
           <p
-            class="text-customGray font-recoleta text-2xl md:text-5xl text-center mb-8"
+            class="text-customGray font-recoleta text-2xl md:text-5xl text-center mb-8 leading-normal"
           >
             Got a project, an idea out of the wild, a collaboaration,
             <br class="hidden md:flex" />
@@ -475,41 +470,49 @@
           <!-- <button class="text-offwhite font-bricolage border border-white rounded-full py-2 px-6 hover:bg-white hover:text-black transition duration-300 cursor">
                 Let's Talk
             </button> -->
-          <a
+          <!-- <a
             href=""
             class="text-customGray border border-customGray px-8 py-4 rounded-full"
             >Let's Talk</a
+          > -->
+          <a
+            href=""
+            class="text-customGray border border-customGray px-8 py-4 rounded-full text-center w-auto min-w-[150px] md:min-w-[200px] max-w-[50%] md:max-w-[250px] md:text-xl text-base"
           >
+            Let's Talk
+          </a>
         </div>
-        <!-- <button class="text-offwhite font-bricolage ">Let's Talk</button> -->
       </div>
 
       <div class="h-px bg-darkGray w-full"></div>
       <div
         class="flex justify-between md:w-[85%] w-[90%] md:items-center my-12 flex-col md:flex-row"
       >
-        <p class="text-A3grey font-bricolage">
+        <p class="text-A3grey font-bricolage md:text-xl">
           ©abasifreke emmanuel all rights reserved.
         </p>
-        <!-- <div class="flex justify-between flex-wrap md:w-[50%]"> -->
+
         <div class="my-8 md:my-0">
-          <p class="text-[#737373] text-xs">Send a Mail</p>
-          <a class="text-A3grey font-bricolage underline" href=""
+          <p class="text-[#737373] text-xs md:text-base">Send a Mail</p>
+          <a class="text-A3grey font-bricolage underline md:text-xl" href=""
             >abasifreke55@gmail.com</a
           >
         </div>
         <div>
-          <p class="text-[#737373] text-xs">My Socials</p>
+          <p class="text-[#737373] text-xs md:text-base">My Socials</p>
           <div>
-            <a class="text-A3grey font-bricolage underline font-light" href=""
+            <a
+              class="text-A3grey font-bricolage underline font-light md:text-xl"
+              href=""
               >instagram.</a
             >
-            <a class="text-A3grey font-bricolage underline font-light" href=""
+            <a
+              class="text-A3grey font-bricolage underline font-light md:text-xl"
+              href=""
               >twitter.</a
             >
           </div>
         </div>
-        <!-- </div> -->
       </div>
     </footer>
   </body>

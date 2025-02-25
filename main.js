@@ -4,7 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!caseStudies.length) return; // Prevent errors if no elements exist
 
   // Calculate max height efficiently
-  const maxHeight = Math.max(...caseStudies.map((cs) => cs.offsetHeight));
+  // const maxHeight = Math.max(...caseStudies.map((cs) => cs.offsetHeight));
+
+  const caseStudyHeight =
+    window.innerWidth >= 900 ? window.innerHeight : window.innerHeight * 0.85;
 
   // Apply max height using requestAnimationFrame to avoid layout thrashing
   requestAnimationFrame(() => {
@@ -14,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  initializeGSAP(maxHeight);
+  initializeGSAP(caseStudyHeight);
 });
 
 gsap.registerPlugin(ScrollTrigger);
@@ -32,25 +35,6 @@ function initializeGSAP(caseStudyHeight) {
     if (index === 0) return; // Skip first card (no animation needed)
 
     gsap.set(card, { y: index * caseStudyHeight });
-    // animation.to(card, { y: 0, duration: index * 0.5, ease: "power1.out" }, 0);
-
-    // animation.to(
-    //   card,
-    //   {
-    //     y: 0,
-    //     duration: 0.8, // Smooth but controlled transition
-    //     ease: "power2.out",
-    //     stagger: {
-    //       each: 0.5, // Ensures one card moves at a time
-    //       onComplete: () => {
-    //         if (index < cards.length - 1) {
-    //           gsap.set(cards[index + 1], { position: "absolute", top: 0 });
-    //         }
-    //       },
-    //     },
-    //   },
-    //   index * 0.6
-    // );
 
     animation.to(
       card,
