@@ -50,11 +50,6 @@
               "Case-study-img5":
                 "url('./Assets/images/Frame 1000002316 (5).svg')",
             },
-
-            backgroundPosition: {
-              "right-20": "center right 20%",
-              "top-100": "center top 100%",
-            },
           },
         },
       };
@@ -65,25 +60,61 @@
   </head>
 
   <body class="bg-customBlue">
+    <div
+      id="preloader"
+      class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-customBlue z-50"
+    >
+      <p class="text-A3grey font-recoleta text-2xl font-bold">10%</p>
+    </div>
     <script src="./main.js"></script>
 
-    <header class="flex flex-col items-center mb-[5%] h-[100vh] md:pb-px">
+    <header
+      class="flex flex-col items-center mb-[5%] h-[100vh] md:pb-px page-content opacity-0"
+    >
       <nav class="flex justify-between md:w-[85%] w-[90%] pt-8 pb-8">
         <img src="./Assets/images/logo (2).svg" class="w-[80px]" alt="" />
-        <div class="flex items-center justify-between gap-4">
+        <div class="md:flex items-center justify-between gap-4 hidden">
           <a
-            href=""
-            class="text-A3grey hidden md:flex flex-shrink-0 font-bricolag text-base md:text-xl"
+            href="#"
+            class="text-A3grey md:flex flex-shrink-0 font-bricolage text-base md:transition-transform duration-300 origin-centertext-xl"
             >My Resume</a
           >
           <a
-            href=""
-            class="text-A3grey border border-white py-3 px-6 rounded-full hidden md:block font-bricolage w-full text-center h-full text-base md:text-xl"
+            href="mailto:abasifreke55@gmail.com"
+            class="text-A3grey border border-white py-3 px-6 rounded-full font-bricolage w-full text-center h-full text-base md:text-xl"
             >Let's Talk</a
           >
         </div>
-        <img src="./Assets/images/menu.svg" alt="" class="flex md:hidden" />
+        <!-- <img src="./Assets/images/menu.svg" alt="" class="" /> -->
+        <div
+          class="hamburger flex flex-col items-center justify-between md:hidden w-[30px] h-[20px]"
+        >
+          <div
+            class="bar w-full h-[4px] rounded-lg transition-transform duration-300 origin-center bg-A3grey"
+          ></div>
+          <div
+            class="bar w-full h-[4px] rounded-lg transition-transform duration-300 origin-center bg-A3grey"
+          ></div>
+          <div
+            class="bar w-full h-[4px] rounded-lg transition-transform duration-300 origin-center bg-A3grey"
+          ></div>
+        </div>
       </nav>
+      <div
+        class="hidden flex-col items-center justify-between gap-4 md:hidden mobile-nav-list"
+      >
+        <a
+          href=""
+          class="text-A3grey md:flex flex-shrink-0 font-bricolag text-base md:transition-transform duration-300 origin-centertext-xl"
+          >My Resume</a
+        >
+        <a
+          href=""
+          class="text-A3grey border border-white py-3 px-6 rounded-full font-bricolage w-full text-center h-full text-base md:text-xl"
+          >Let's Talk</a
+        >
+      </div>
+
       <div class="md:w-[85%] w-[90%] flex flex-col flex-grow justify-center">
         <div class="w-[100%] flex flex-col justify-between">
           <div class="w-full mb-4">
@@ -124,7 +155,7 @@
     </header>
 
     <section
-      class="flex items-center flex-col wrapper mt-[20%] md:mt-[10%] mb-[20%] md:bg-background-pattern bg-cover h-[100vh]"
+      class="flex items-center flex-col wrapper mt-[20%] md:mt-[10%] mb-[20%] md:bg-background-pattern bg-cover h-[100vh] page-content opacity-0"
     >
       <div class="md:w-[85%] w-[90%] mb-14 xl:mb-20 pinn">
         <p
@@ -152,7 +183,7 @@
 
         <div class="w-[100%] md:w-[90%] relative flex flex-col">
           <div
-            class="bg-fadeBlack md:pt-8 mb:pb-5 pt-6 pb-4 pb-2 pb-2 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col justify-center items-stretch flex-1"
+            class="bg-fadeBlack md:pt-8 mb:pb-5 pt-6 pb-4 pb-2 pb-2 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col justify-center items-stretch flex-1 right-0"
           >
             <div class="mb-4 flex md:mx-12 mx-6">
               <div class="">
@@ -204,7 +235,7 @@
           </div>
 
           <div
-            class="bg-fadeBlack md:pt-8 mb:pb-5 pt-6 pb-4 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch justify-center flex-1"
+            class="bg-fadeBlack md:pt-8 mb:pb-5 pt-6 pb-4 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch justify-center flex-1 right-0"
           >
             <div class="mb-4 flex md:mx-12 mx-6">
               <div class="">
@@ -256,7 +287,7 @@
           </div>
 
           <div
-            class="bg-fadeBlack md:pt-8 mb:pb-5 pt-6 pb-4 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1 justify-center"
+            class="bg-fadeBlack md:pt-8 mb:pb-5 pt-6 pb-4 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1 justify-center right-0"
           >
             <div class="mb-4 flex md:mx-12 mx-6">
               <div class="">
@@ -310,7 +341,7 @@
           </div>
 
           <div
-            class="bg-fadeBlack md:pt-8 mb:pb-5 pt-6 pb-4 w-full rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex items-stretch flex-col flex-1"
+            class="bg-fadeBlack md:pt-8 mb:pb-5 pt-6 pb-4 w-full rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex items-stretch flex-col flex-1 right-0"
           >
             <div
               class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg"
@@ -375,7 +406,7 @@
           </div>
 
           <div
-            class="bg-fadeBlack md:pt-8 mb:pb-5 pt-6 pb-4 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1"
+            class="bg-fadeBlack md:pt-8 mb:pb-5 pt-6 pb-4 w-[100%] rounded-lg case-study absolute h-[85vh] md:h-[100vh] flex flex-col items-stretch flex-1 right-0"
           >
             <div
               class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg"
@@ -443,7 +474,7 @@
     <!-- pb-[25%] -->
 
     <section
-      class="w-full justify-center items-center flex md:mb-[10%] mb-[20%]"
+      class="w-full justify-center items-center flex md:mb-[10%] mb-[20%] page-content opacity-0"
     >
       <div
         class="md:w-[85%] w-[90%] px-2 py-2 bg-fadeBlack relative flex flex-col items-center rounded-lg"
@@ -471,15 +502,17 @@
           </div>
 
           <a
-            href=""
-            class="text-A3grey border border-white md:px-[10%] md:py-[4%] px-[15%] py-[8%] rounded-full font-bricolage text-center font-semibold text-xl md:text-lg"
+            href="mailto:abasifreke55@gmail.com"
+            class="text-A3grey border border-white px-10 py-4 md:px-16 md:py-6 rounded-full font-bricolage text-center font-semibold text-xl md:text-lg w-auto md:w-fit"
             >Let's Talk</a
           >
         </div>
       </div>
     </section>
 
-    <footer class="flex flex-col items-center border-t border-darkGray">
+    <footer
+      class="flex flex-col items-center border-t border-darkGray page-content opacity-0"
+    >
       <div
         class="flex justify-between md:w-[85%] w-[90%] md:items-center my-12 flex-col md:flex-row"
       >
@@ -491,7 +524,7 @@
           <p class="text-[#737373] text-xs md:text-base">Send a Mail</p>
           <a
             class="text-A3grey font-bricolage underline text-base md:text-xl"
-            href=""
+            href="mailto:abasifreke55@gmail.com"
             >abasifreke55@gmail.com</a
           >
         </div>
@@ -500,12 +533,12 @@
           <div>
             <a
               class="text-A3grey font-bricolage underline font-light text-base md:text-xl"
-              href=""
+              href="https://www.instagram.com/abazmmanuel/"
               >instagram.</a
             >
             <a
               class="text-A3grey font-bricolage underline font-light text-base md:text-xl"
-              href=""
+              href="https://twitter.com/abazmmanuel"
               >twitter.</a
             >
           </div>

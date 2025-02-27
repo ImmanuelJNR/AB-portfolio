@@ -11,12 +11,21 @@
   font-style: normal;
 }
 
-.case-study {
-  right: 0;
-}
-
 .pagination .active {
   width: 1.5rem; /* Make it bigger */
   height: 1.5rem;
   transition: all 0.5s ease; /* Add smooth animation */
+}
+
+.hamburger.trigger .bar:first-child {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.trigger .bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.trigger .bar:last-child {
+  transform: rotate(45deg) translate(-5px, -6px);
 }

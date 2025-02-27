@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Apply max height using requestAnimationFrame to avoid layout thrashing
   requestAnimationFrame(() => {
     caseStudies.forEach((cs) => {
-      cs.style.height = `${maxHeight}px`;
+      // cs.style.height = `${maxHeight}px`;
       cs.style.willChange = "transform"; // Helps with smooth animations
     });
   });
@@ -75,3 +75,80 @@ function updatePagination(progress, totalCards, dots) {
     dot.style.transform = isActive ? "scale(1.5)" : "scale(1)";
   });
 }
+
+// navabar
+document.addEventListener("DOMContentLoaded", () => {
+  const navList = document.querySelector(".mobile-nav-list");
+  const hamburger = document.querySelector(".hamburger");
+
+  // Add a click event listener to the hamburger element
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("trigger");
+    navList.classList.toggle("hidden");
+    navList.classList.toggle("flex");
+  });
+});
+
+// preloader
+document.addEventListener("DOMContentLoaded", () => {
+  const preloader = document.getElementById("preloader");
+  const percentageText = preloader.querySelector("p");
+  const pageContents = document.querySelectorAll(".page-content");
+  const images = document.querySelectorAll("img");
+
+  let imagesLoaded = 0;
+  const totalImages = images.length;
+
+  function updateProgress() {
+    const progress = Math.round((imagesLoaded / totalImages) * 100);
+    percentageText.textContent = `${progress}%`;
+  }
+
+  // Function to check if all images are loaded
+  function imageLoaded() {
+    // document.body.style.overflow = "hidden";
+    imagesLoaded++;
+    updateProgress();
+
+    if (imagesLoaded === totalImages) {
+      let counter = 0;
+      const interval = setInterval(() => {
+        counter += 10;
+        percentageText.textContent = `${counter}%`;
+        if (counter >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            preloader.style.opacity = "0";
+            setTimeout(() => {
+              preloader.style.display = "none";
+              document.body.style.overflow = "auto"; // Enable scrolling
+              pageContents.forEach((content) => {
+                content.style.opacity = "1"; // Show content
+              });
+            }, 300);
+          }, 500);
+        }
+      }, 10);
+    }
+  }
+
+  updateProgress();
+
+  // If there are no images, hide the preloader immediately
+  if (totalImages === 0) {
+    preloader.style.display = "none";
+    pageContents.forEach((content) => {
+      content.style.opacity = "1";
+    });
+    document.body.style.overflow = "none";
+  } else {
+    images.forEach((img) => {
+      if (img.complete) {
+        imageLoaded(); // Already loaded
+      } else {
+        img.addEventListener("load", imageLoaded);
+        img.addEventListener("error", imageLoaded); // Handle errors
+      }
+    });
+  }
+});
