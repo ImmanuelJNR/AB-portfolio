@@ -29,19 +29,26 @@ function initializeGSAP(caseStudyHeight) {
 
   if (!cards.length || !header) return; // Ensure elements exist before proceeding
 
-  const animation = gsap.timeline();
+  const animation = gsap.timeline( {
+    defaults: { ease: "power3.out", duration: 1.2 }, 
+  }
+  );
+
+
 
   cards.forEach((card, index) => {
     if (index === 0) return; // Skip first card (no animation needed)
 
     gsap.set(card, { y: index * caseStudyHeight });
 
+
+
     animation.to(
       card,
       {
         y: 0,
         duration: 0.8, // Smooth transition
-        ease: "power2.out",
+        ease: "power3.out",
       },
       index
     );
@@ -52,13 +59,14 @@ function initializeGSAP(caseStudyHeight) {
     start: "top top",
     pin: true,
     end: `+=${cards.length * caseStudyHeight + header.offsetHeight}`,
-    scrub: 0.4,
+    scrub: 0.8,
     animation: animation,
     markers: false,
     snap: {
-      snapTo: 1 / (cards.length - 1), // Snap to each section
+      // snapTo: 1 / (cards.length - 1), // Snap to each section
+      snapTo: "labels", // Ensures controlled snapping
       duration: 0.5, // Smooth snapping
-      ease: "power2.inOut",
+      ease: "power3.inOut",
     },
     onUpdate: ({ progress }) =>
       updatePagination(progress, cards.length, paginationDots),
@@ -151,4 +159,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // smooth scrolling to case studies section on btn click
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.location.hash === "#case-studies") {
+      document.getElementById("case-studies")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  });
 });
